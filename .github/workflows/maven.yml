@@ -16,9 +16,10 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
+    permissions:
+      # The Dependency submission API requires write permission on the repository to submit dependencies
+      contents: write
     steps:
     - uses: actions/checkout@v3
     - name: Set up JDK
