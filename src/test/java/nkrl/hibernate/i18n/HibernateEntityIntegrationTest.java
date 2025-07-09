@@ -19,15 +19,10 @@ public class HibernateEntityIntegrationTest {
 
     private EntityManager entityManager;
 
-    /*@BeforeAll
-    public static void startDbServer() {
-        Server.startWebServer();
-    }*/
-
     @BeforeAll
     public static void setUpPersistence() throws IOException {
         LogManager.getLogManager().readConfiguration(HibernateEntityIntegrationTest.class.getResourceAsStream("/logging.properties"));
-        entityManagerFactory = Persistence.createEntityManagerFactory("nkrl.hibernate.l10n.entity");
+        entityManagerFactory = Persistence.createEntityManagerFactory("nkrl.hibernate.i18n.entity");
     }
 
     @BeforeEach
